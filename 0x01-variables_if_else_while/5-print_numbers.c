@@ -10,10 +10,6 @@
 
 int main(void)
 {
-	int i;
-
-	for (i = 48 ; i < 58 ; i++)
-		putchar(i);
-	putchar('\n');
+	printf("0123456789\n");
 	return (0);
 }
