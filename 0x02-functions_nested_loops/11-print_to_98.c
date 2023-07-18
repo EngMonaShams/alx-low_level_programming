@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * print_to_98 - a prototype that prints natural numbers
  *
@@ -21,7 +21,7 @@ void print_to_98(int n)
 		for (k = n; k > 98; k--)
 			printf("%d, ", k);
 	}
-	printf("%d", 98);
+	printf("%d\n", 98);
 
 
 }
