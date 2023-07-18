@@ -1,0 +1,5 @@
+#!/bin/bash
+chmod u+x $MYSCRIPT
+git add .
+git commit -m "$MYSCRIPT"
+git push
