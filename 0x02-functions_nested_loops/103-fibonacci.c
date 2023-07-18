@@ -14,10 +14,11 @@ int main(void)
 	unsigned long int sum = 0;
 
 	do {
-		sum += num;
 		nxt = pre + num;
 		pre = num;
 		num = nxt;
+		if (num % 2 == 0)
+			sum += num;
 	} while (num <= 4000000);
 	printf("%lu\n", sum);
 
