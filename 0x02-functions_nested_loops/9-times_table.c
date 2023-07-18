@@ -11,16 +11,17 @@ void times_table(void)
 
 	for (t = 0; t < 10; t++)
 	{
-		for (n = 0; n < 10; n++)
+		_putchar(48);
+		for (n = 1; n < 10; n++)
 		{
-			pr = n * t;
+			_putchar(',');
 			_putchar(' ');
+			pr = n * t;
 			if (pr / 10 == 0)
 				_putchar(' ');
 			else
 				_putchar('0' + pr / 10);
 			_putchar('0' + pr % 10);
-			_putchar(',');
 		}
 	}
 }
