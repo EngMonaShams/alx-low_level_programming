@@ -13,6 +13,7 @@ void times_table(void)
 	{
 		for (n = 0; n < 10; n++)
 		{
+			pr = n * t;
 			_putchar(' ');
 			if (pr / 10 == 0)
 				_putchar(' ');
