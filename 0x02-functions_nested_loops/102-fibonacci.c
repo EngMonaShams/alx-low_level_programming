@@ -20,7 +20,7 @@ int main(void)
 		num = nxt;
 		printf(", %ld", num);
 		seq++;
-	} while (seq <= 50);
+	} while (seq < 50);
 	putchar('\n');
 
 	return (0);
