@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
- * print_line - a function that prints the numbers, from 0 to 9
+ * print_line - a function that prints line
+ *
+ * @n : number of lines
  */
 
 void print_line(int n)
 {
-	int i;
+	int row;
 
-	if (n > 0)
+	if (n <= 0)
+		_putchar('\n');
+	else
 	{
-		for (i = 1; i <= n; i++)
-		{
+		for (row = 1; row <= n; row++)
 			_putchar('_');
-		}
 		_putchar('\n');
 	}
-	else
-		_putchar('\n');
 }
