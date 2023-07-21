@@ -1,25 +1,25 @@
 #include "main.h"
 
 /**
- * print_diagonal - a function that prints the numbers, from 0 to 9
+ * print_diagonal - a function that prints triangle
  *
- * @n : number of lines
+ * @n : length
  */
 
 void print_diagonal(int n)
 {
-	int line, sp;
+	int sp, row;
 
-	if (n > 0)
-	{
-		for (line = 1; line <= n; line++)
-		{
-			for (sp = 1; sp <= line; sp++)
-				_putchar(' ');
-		_putchar('\\');
+	if (n <= 0)
 		_putchar('\n');
+	else
+	{
+		for (row = 1; row <= n; row++)
+		{
+			for (sp = 1; sp <= (row - 1); sp++)
+				_putchar(' ');
+			_putchar('\\');
+			_putchar('\n');
 		}
 	}
-	else
-		_putchar('\n');
 }
