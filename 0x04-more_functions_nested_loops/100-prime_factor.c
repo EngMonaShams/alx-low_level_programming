@@ -8,9 +8,10 @@
  * Return: 1 (isprime)
  *         0 (not prime)
  */
-int isprime(int n)
+int isprime(long int n)
 {
-	int i, prime = 1;
+	long int i;
+	int prime = 1;
 
 	if (n == 0 || n == 1)
 		prime = 0;
@@ -32,14 +33,14 @@ int isprime(int n)
 
 int main(void)
 {
-	int num, factor;
+	long int num, factor;
 
-	num = 1231952;
-	for (factor = num / 2; factor > 0; factor--)
+	num = 612852475143;
+	for (factor = num; factor > 0; factor--)
 	{
 		if (num % factor == 0 && isprime(factor))
 		{
-			printf("%d\n", factor);
+			printf("%ld\n", factor);
 			break;
 		}
 		else
