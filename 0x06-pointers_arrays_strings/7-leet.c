@@ -23,7 +23,7 @@ char *leet(char *str)
 		{
 			if (*str == s_upper[i] || *str == s_lower[i])
 			{
-			       *str = 48 + value[i];
+				*str = 48 + value[i];
 			}
 		}
 		str++;
