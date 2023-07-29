@@ -27,13 +27,14 @@ void print_number(int n)
 		r = n / exp;
 		_putchar('0' + r);
 		check = n / (exp / 10);
-		n %= exp;
-		exp /= 10;
-		if (check % 10 == 0)
+		while (check % 10 == 0)
 		{
 			_putchar('0');
 			exp /= 10;
+			check = n / (exp / 10);
 		}
+		n %= exp;
+		exp /= 10;
 	}
 	_putchar('0' + n);
 }
