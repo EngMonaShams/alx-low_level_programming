@@ -15,12 +15,17 @@ char *rot13(char *str)
 
 	while (*str)
 	{
-		if ((*str >= 'A' && *str <= 'M')
-			       || (*str >= 'a' && *str <= 'm'))
-			*str += 13;
-		else if ((*str >= 'N' && *str <= 'Z')
-				|| (*str >= 'n' && *str <= 'z'))
+		while ((*str >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z'))
+		{
+			if ((*str >= 'A' && *str <= 'M')
+				       || (*str >= 'a' && *str <= 'm'))
+			{
+				*str += 13;
+				break;
+			}
 			*str -= 13;
+			break;
+		}
 		str++;
 	}
 	return (ptr);
