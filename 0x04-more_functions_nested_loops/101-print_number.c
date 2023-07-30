@@ -1,35 +1,41 @@
 #include "main.h"
-#include <math.h>
+
 /**
- * print_number - a function that prints the number
+ * print_number - a function that concatenates two strings.
  *
- * @n: number to be printed
+ * @n : intger
+ *
  */
 
 void print_number(int n)
 {
-	int count = 0;
-	int i, ch, ex, mod;
-
-	do {
-		n /= 10;
-		++count;
-	} while (n != 0);
+	int r, q, check;
+	int exp = 1;
 
 	if (n < 0)
-		_putchar('-');
-	for (i = count; i > 0; --i)
 	{
-		ex = i;
-		mod = 1;
-		while (ex != 0)
-		{
-			mod *=10;
-			ex--;
-		}
-		ch = n / mod;
-		_putchar('0' + ch);
-		n = n % mod;
+		_putchar('-');
+		n *= -1;
 	}
-	_putchar('\n');
+	q = n;
+	while (q >= 10)
+	{
+		q /= 10;
+		exp *= 10;
+	}
+	while (n >= 10 && exp >= 10)
+	{
+		r = n / exp;
+		_putchar('0' + r);
+		check = n / (exp / 10);
+		while (check % 10 == 0 && exp >= 100)
+		{
+			_putchar('0');
+			exp /= 10;
+			check = n / (exp / 10);
+		}
+		n %= exp;
+		exp /= 10;
+	}
+	_putchar('0' + n);
 }
