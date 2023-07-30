@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
  * isprime - a funtion that check for prime number
@@ -15,7 +16,7 @@ int isprime(long int n)
 
 	if (n == 0 || n == 1)
 		prime = 0;
-	for (i = 2; i <= n / 2; ++i)
+	for (i = 2; i <= sqrt(n); i++)
 	{
 		if (n % i == 0)
 			prime = 0;
@@ -36,7 +37,7 @@ int main(void)
 	long int num, factor;
 
 	num = 612852475143;
-	for (factor = num; factor > 0; factor--)
+	for (factor = sqrt(num); factor > 1; factor--)
 	{
 		if (num % factor == 0 && isprime(factor))
 		{
