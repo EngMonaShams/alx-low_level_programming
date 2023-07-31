@@ -11,32 +11,43 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	char *ptr;
-	int i, count = 0, flag;
+	char *ptr1, *ptr2, *ptr3;
+	int i, count = 0, flag = 0;
+	int len = 0, j;
 
-	ptr = needle;
+	if (*needle == '\0')
+		return (haystack);
 
-	while (*ptr)
+	ptr1 = needle;
+
+	while (*ptr1)
 	{
 		count++;
-		ptr++;
+		ptr1++;
+	}
+	ptr2 = haystack;
+	while (*ptr2)
+	{
+		len++;
+		ptr2++;
 	}
 
-	while (*haystack)
+	ptr3 = haystack;
+	for (j = 0; j <= len - count; j++)
 	{
-		if (*haystack == *needle)
+		ptr3 = &haystack[j];
+		if (haystack[j] == needle[0])
 		{
 			flag = 1;
 			for (i = 0; i < count; i++)
-				if (haystack[i] != needle[i])
+				if (haystack[j + i] != needle[i])
 				{
 					flag = 0;
 					break;
 				}
 			if (flag == 1)
-				return (haystack);
+				return (ptr3);
 		}
-		haystack++;
 	}
 	return (NULL);
 }
