@@ -11,7 +11,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, count = 0;
+	int i, count = 1;
 	char *ptr;
 
 	ptr = s;
@@ -20,7 +20,7 @@ unsigned int _strspn(char *s, char *accept)
 		count++;
 		s++;
 	}
-	for (i = 0; i <= count ; i++)
+	for (i = 1; i <= count ; i++)
 	{
 		if (*ptr == accept[0])
 			break;
