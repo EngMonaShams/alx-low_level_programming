@@ -28,12 +28,8 @@ int _is_pal(char *s, int n)
 
 int is_palindrome(char *s)
 {
-	int n = 0;
+	int n;
 
-	while (*s)
-	{
-		n++;
-		s++;
-	}
-	return (_is_pal(s - n, n));
+	n = _strlen_recursion(s);
+	return (_is_pal(s, n));
 }
