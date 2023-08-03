@@ -1,6 +1,14 @@
 #include "main.h"
 
-
+/**
+ * is_prime - a function that check for prime number recursively
+ *
+ * @n: number
+ * @z: checker
+ *
+ * Return: 1 (if prime)
+ *         0 (otherwise)
+ */
 int is_prime(int n, int z)
 {
 	if (n <= 1)
