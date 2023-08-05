@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 
 	while (--argc)
 	{
-		if (*argv[argc] >= '0' && *argv[argc] <= '9')
+		if ((*argv[argc] >= '0' && *argv[argc] <= '9') || *argv[argc] == '-')
 			sum += atoi(argv[argc]);
 		else
 			return (printf("Error\n"), 1);
