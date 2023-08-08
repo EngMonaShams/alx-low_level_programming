@@ -14,7 +14,7 @@ char *_strdup(char *str)
 	char *m;
 	int size = 0;
 
-	while(*str)
+	while (*str)
 	{
 		size++;
 		str++;
@@ -22,7 +22,7 @@ char *_strdup(char *str)
 
 	m = malloc(size);
 	if (size == 0 || m == 0)
-		return (0);
+		return (NULL);
 	while (size--)
 	{
 		str--;
