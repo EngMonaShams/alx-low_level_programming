@@ -2,6 +2,22 @@
 #include "main.h"
 
 /**
+ * get_sign - function to get sign
+ * @s: input string
+ *
+ * Return: sign
+ */
+int get_sign(const char *s)
+{
+	unsigned long int i;
+	int sign = 1;
+
+	for (i = 0; !(s[i] >= 48 && s[i] <= 57); i++)
+		if (s[i] == '-')
+			sign *= -1;
+	return (sign);
+}
+/**
  * _atoi - afunction that convert srting to int
  * @s: input string
  *
@@ -68,6 +84,7 @@ void print_int(unsigned long int n)
 
 int main(int argc, char const *argv[])
 {
+	int si = 1;
 	(void)argc;
 
 	if (argc != 3)
@@ -75,6 +92,9 @@ int main(int argc, char const *argv[])
 		_puts("Error");
 		exit(98);
 	}
+	si = get_sign(argv[1]) * get_sign(argv[2]);
+	if (si == -1)
+		_putchar('-');
 	print_int(_atoi(argv[1]) * _atoi(argv[2]));
 	_putchar('\n');
 
