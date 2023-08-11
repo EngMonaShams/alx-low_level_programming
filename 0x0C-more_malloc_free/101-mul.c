@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include "main.h"
 
+int sign = 1;
 /**
  * _atoi - afunction that convert srting to int
  * @s: input string
@@ -9,7 +10,6 @@
  */
 unsigned long int _atoi(const char *s)
 {
-	int sign = 1;
 	unsigned long int resp = 0, i;
 
 	for (i = 0; !(s[i] >= 48 && s[i] <= 57); i++)
@@ -20,7 +20,7 @@ unsigned long int _atoi(const char *s)
 		resp *= 10;
 		resp += (s[i] - 48);
 	}
-	return (sign * resp);
+	return (resp);
 }
 
 /**
@@ -49,6 +49,8 @@ void print_int(unsigned long int n)
 {
 	unsigned long int divisor = 1, i, resp;
 
+	if (sign == -1)
+		_putchar('-');
 	for (i = 0; n / divisor > 9; i++, divisor *= 10)
 		;
 	for (; divisor >= 1; n %= divisor, divisor /= 10)
