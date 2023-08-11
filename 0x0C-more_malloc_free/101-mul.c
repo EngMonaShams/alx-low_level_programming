@@ -7,7 +7,7 @@
  *
  * Return: n
  */
-long long int _atoi(const char *s)
+unsigned long int _atoi(const char *s)
 {
 	int sign = 1;
 	unsigned long int resp = 0, i;
@@ -45,9 +45,9 @@ void _puts(char *m)
  * @n: int
  */
 
-void print_int(long long int n)
+void print_int(unsigned long int n)
 {
-	long long int divisor = 1, i, resp;
+	unsigned long int divisor = 1, i, resp;
 
 	for (i = 0; n / divisor > 9; i++, divisor *= 10)
 		;
