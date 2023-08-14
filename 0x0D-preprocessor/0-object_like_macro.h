@@ -1,5 +1,5 @@
-#ifndef 0-OBJECT_LIKE_MARCO.H
-#define 0-OBJECT_LIKE_MARCO.H
+#ifndef _OBJECT_LIKE_MARCO.H
+#define _OBJECT_LIKE_MARCO.H
 
 #define SIZE 1024
 
