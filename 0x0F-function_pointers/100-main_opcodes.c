@@ -10,7 +10,7 @@
  *
  * Return: int
  */
-int main(int agrc, char **argv)
+int main(int argc, char **argv)
 {
 	char *p = (char *)main;
 	int b;
