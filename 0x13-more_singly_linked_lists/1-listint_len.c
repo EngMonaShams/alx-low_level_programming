@@ -1,14 +1,14 @@
 #include "lists.h"
 
 /**
- * list_len - a function that  prints all the elements of a list_t list.
+ * listint_len - a function that  prints all the elements of a list_t list.
  *
  * @h: head node
  *
  * Return: size of list
  */
 
-size_t list_len(const list_t *h)
+size_t listint_len(const listint_t *h)
 {
 	size_t i = 0;
 
