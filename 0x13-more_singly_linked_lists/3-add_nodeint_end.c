@@ -1,31 +1,30 @@
 #include "lists.h"
 
 /**
- * add_node_end - a function that  prints all the elements of a list_t list.
+ * add_nodeint_end - a function that  prints all the elements of a list_t list.
  *
  * @head: pointer to head location
  *
- * @str: new head
+ * @n: new head
  *
  * Return: size of list
  */
 
-list_t *add_node_end(list_t **head, const char *str)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	list_t *new_node = malloc(sizeof(list_t));
-	list_t *node = *head;
+	listint_t *new_node = malloc(sizeof(listint_t));
+	listint_t *node = *head;
 
 	if (!head || !new_node)
 		return (NULL);
-	if (str)
+	if (n)
 	{
-		new_node->str = strdup(str);
-		if (!new_node->str)
+		new_node->n = n;
+		if (!new_node->n)
 		{
 			free(new_node);
 			return (NULL);
 		}
-		new_node->len = _strlen(new_node->str);
 	}
 	if (node)
 	{
