@@ -1,4 +1,9 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+#define BUFFER_SIZE 1024
 
 void error_and_exit(char *message, int exit_code) {
     dprintf(STDERR_FILENO, "%s", message);
